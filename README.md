@@ -1,6 +1,6 @@
 # Night Writer
 
-Find the [project spec] here https://backend.turing.edu/module1/projects/night_writer/
+Find the [project spec here] https://backend.turing.edu/module1/projects/night_writer/
 
 ==========Author==========
 ```
