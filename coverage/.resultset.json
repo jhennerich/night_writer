@@ -10,12 +10,26 @@
           null,
           null,
           1,
+          1,
           null,
           null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/johnhennerich/turing/1mod/projects/night_writer/lib/file_interaction.rb": {
+        "lines": [
+          1,
           null
         ]
       }
     },
-    "timestamp": 1646351570
+    "timestamp": 1646355009
   }
 }
