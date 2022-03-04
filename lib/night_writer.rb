@@ -10,8 +10,6 @@ class NightWriter
   def display_usage_message_to_stdout
     return "Usage ruby ./lib/night_writer message.txt braille.txt"
   end
-
-#  handle = File.open(ARGV[0], "r")
 end
 
 night_writer = NightWriter.new
