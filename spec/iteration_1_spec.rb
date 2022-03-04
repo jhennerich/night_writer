@@ -24,7 +24,7 @@ RSpec.describe NightWriter do
 
   it 'outputs to $stdout when called with two argument' do
     @night_writer.display_write_message_to_stdout
-    message = "Created 'braille.txt' containing #{File.size(ARGV[0])} characters"
+    message = "Created '#{ARGV[1]}' containing #{File.size(ARGV[0])} characters"
     expect(@night_writer.display_write_message_to_stdout).to eq(message)
   end
 end
@@ -39,7 +39,6 @@ RSpec.describe FileInteraction do
   end
 
   it 'can read the data file' do
-    #byte_size = File.size(ARGV[0])
     message_data = File.read(ARGV[0]).chomp
     expect(message_data).to eq("hello world")
   end

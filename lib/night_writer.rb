@@ -1,5 +1,6 @@
 require 'pry'
-require 'file_interaction'
+require './lib/file_interaction'
+
 class NightWriter
   attr_reader :file_interaction
 
@@ -13,13 +14,13 @@ class NightWriter
   end
 
   def display_write_message_to_stdout
-    return "Created 'braille.txt' containing #{File.size(ARGV[0])} characters"
+    return "Created '#{ARGV[1]}' containing #{File.size(ARGV[0])} characters"
   end
-
 end
 
 night_writer = NightWriter.new
 
 if ARGV[0] != "message.txt" || ARGV[1] != "braille.txt"
   puts night_writer.display_usage_message_to_stdout
+  return
 end
