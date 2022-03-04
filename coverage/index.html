@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-03T20:48:26-07:00">2022-03-03T20:48:26-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-03T21:54:27-07:00">2022-03-03T21:54:27-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.89
+         1.33
        </span>
     </span> hits/line
     )
@@ -39,12 +39,12 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>2</b> files in total.
+    <b>1</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>19</b> relevant lines,
-    <span class="green"><b>19</b> lines covered</span> and
+    <b>3</b> relevant lines,
+    <span class="green"><b>3</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -71,24 +71,13 @@
       <tbody>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#c93d75361c60195eb7e0ad97de2758dd2d2a7442" class="src_link" title="lib/file_interaction.rb">lib/file_interaction.rb</a></td>
+            <td class="strong t-file__name"><a href="#369fe53cb6affe8f76e1bab7d2fece543818fac3" class="src_link" title="lib/letter_to_braille.rb">lib/letter_to_braille.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">5</td>
+            <td class="cell--number">33</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">3</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">3.40</td>
-            
-          </tr>
-        
-          <tr class="t-file">
-            <td class="strong t-file__name"><a href="#c090dd539140bb14e2ff3ca8aca26a1096c7bcd6" class="src_link" title="lib/night_writer.rb">lib/night_writer.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">26</td>
-            <td class="cell--number">14</td>
-            <td class="cell--number">14</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.36</td>
+            <td class="cell--number">1.33</td>
             
           </tr>
         
@@ -109,9 +98,9 @@
 
       <div class="source_files">
       
-        <div class="source_table" id="c93d75361c60195eb7e0ad97de2758dd2d2a7442">
+        <div class="source_table" id="369fe53cb6affe8f76e1bab7d2fece543818fac3">
   <div class="header">
-    <h3>lib/file_interaction.rb</h3>
+    <h3>lib/letter_to_braille.rb</h3>
     <h4>
       <span class="green">
   100.0%
@@ -123,8 +112,8 @@
     
 
     <div class="t-line-summary">
-      <b>5</b> relevant lines.
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>3</b> relevant lines.
+      <span class="green"><b>3</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -142,7 +131,7 @@
 
             
 
-            <code class="ruby">class FileInteraction</code>
+            <code class="ruby">module LetterToBraille</code>
           </li>
         </div>
       
@@ -153,7 +142,7 @@
 
             
 
-            <code class="ruby">  attr_reader :file_name, :byte_size</code>
+            <code class="ruby">  def letter_keys</code>
           </li>
         </div>
       
@@ -164,159 +153,29 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    {</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="4">
+            <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">  def initialize()</code>
+            <code class="ruby">      &quot;a&quot; =&gt; [&quot;0.&quot;, &quot;..&quot;, &quot;..&quot;],</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="5">
-            <span class="hits">7</span>
-            
-
-            
-
-            <code class="ruby">    @file_name = file_name</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="7" data-linenumber="6">
-            <span class="hits">7</span>
-            
-
-            
-
-            <code class="ruby">    @byte_size = byte_size</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="7">
+          <li class="never" data-hits="" data-linenumber="5">
             
             
 
             
 
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="c090dd539140bb14e2ff3ca8aca26a1096c7bcd6">
-  <div class="header">
-    <h3>lib/night_writer.rb</h3>
-    <h4>
-      <span class="green">
-  100.0%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>14</b> relevant lines.
-      <span class="green"><b>14</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">require &#39;pry&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">require &#39;./lib/file_interaction&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="3">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">class NightWriter</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  attr_reader :file_interaction</code>
+            <code class="ruby">      &quot;b&quot; =&gt; [&quot;0.&quot;, &quot;0.&quot;, &quot;..&quot;],</code>
           </li>
         </div>
       
@@ -327,29 +186,29 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      &quot;c&quot; =&gt; [&quot;00&quot;, &quot;..&quot;, &quot;..&quot;],</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="7">
+            
             
 
             
 
-            <code class="ruby">  def initialize()</code>
+            <code class="ruby">      &quot;d&quot; =&gt; [&quot;00&quot;, &quot;.0&quot;, &quot;..&quot;],</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="8">
-            <span class="hits">4</span>
+          <li class="never" data-hits="" data-linenumber="8">
+            
             
 
             
 
-            <code class="ruby">    @file_interaction = FileInteraction.new</code>
+            <code class="ruby">      &quot;e&quot; =&gt; [&quot;0.&quot;, &quot;.0&quot;, &quot;..&quot;],</code>
           </li>
         </div>
       
@@ -360,7 +219,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      &quot;f&quot; =&gt; [&quot;00&quot;, &quot;0.&quot;, &quot;..&quot;],</code>
           </li>
         </div>
       
@@ -371,7 +230,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">      &quot;g&quot; =&gt; [&quot;00&quot;, &quot;00&quot;, &quot;..&quot;],</code>
           </li>
         </div>
       
@@ -382,29 +241,29 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      &quot;h&quot; =&gt; [&quot;0.&quot;, &quot;00&quot;, &quot;..&quot;],</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="12">
+            
             
 
             
 
-            <code class="ruby">  def display_usage_message_to_stdout</code>
+            <code class="ruby">      &quot;i&quot; =&gt; [&quot;.0&quot;, &quot;0.&quot;, &quot;..&quot;],</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="13">
-            <span class="hits">2</span>
+          <li class="never" data-hits="" data-linenumber="13">
+            
             
 
             
 
-            <code class="ruby">    return &quot;Usage ruby ./lib/night_writer message.txt braille.txt&quot;</code>
+            <code class="ruby">      &quot;j&quot; =&gt; [&quot;.0&quot;, &quot;00&quot;, &quot;..&quot;],</code>
           </li>
         </div>
       
@@ -415,7 +274,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">      &quot;k&quot; =&gt; [&quot;0.&quot;, &quot;..&quot;, &quot;0.&quot;],</code>
           </li>
         </div>
       
@@ -426,29 +285,29 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      &quot;l&quot; =&gt; [&quot;0.&quot;, &quot;0.&quot;, &quot;0.&quot;],</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="16">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="16">
+            
             
 
             
 
-            <code class="ruby">  def display_write_message_to_stdout</code>
+            <code class="ruby">      &quot;m&quot; =&gt; [&quot;00&quot;, &quot;..&quot;, &quot;0.&quot;],</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="17">
-            <span class="hits">2</span>
+          <li class="never" data-hits="" data-linenumber="17">
+            
             
 
             
 
-            <code class="ruby">    return &quot;Created &#39;#{ARGV[1]}&#39; containing #{File.size(ARGV[0])} characters&quot;</code>
+            <code class="ruby">      &quot;n&quot; =&gt; [&quot;00&quot;, &quot;.0&quot;, &quot;0.&quot;],</code>
           </li>
         </div>
       
@@ -459,7 +318,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">      &quot;o&quot; =&gt; [&quot;0.&quot;, &quot;.0&quot;, &quot;0.&quot;],</code>
           </li>
         </div>
       
@@ -470,7 +329,7 @@
 
             
 
-            <code class="ruby">end</code>
+            <code class="ruby">      &quot;p&quot; =&gt; [&quot;00&quot;, &quot;0.&quot;, &quot;0.&quot;],</code>
           </li>
         </div>
       
@@ -481,18 +340,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      &quot;q&quot; =&gt; [&quot;00&quot;, &quot;00&quot;, &quot;0.&quot;],</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="21">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="21">
+            
             
 
             
 
-            <code class="ruby">night_writer = NightWriter.new</code>
+            <code class="ruby">      &quot;r&quot; =&gt; [&quot;0.&quot;, &quot;00&quot;, &quot;0.&quot;],</code>
           </li>
         </div>
       
@@ -503,45 +362,122 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      &quot;s&quot; =&gt; [&quot;.0&quot;, &quot;0.&quot;, &quot;0.&quot;],</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="23">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="23">
+            
             
 
             
 
-            <code class="ruby">if ARGV[0] != &quot;message.txt&quot; || ARGV[1] != &quot;braille.txt&quot;</code>
+            <code class="ruby">      &quot;t&quot; =&gt; [&quot;.0&quot;, &quot;00&quot;, &quot;0.&quot;],</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="24">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="24">
+            
             
 
             
 
-            <code class="ruby">  puts night_writer.display_usage_message_to_stdout</code>
+            <code class="ruby">      &quot;u&quot; =&gt; [&quot;0.&quot;, &quot;..&quot;, &quot;00&quot;],</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="25">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="25">
+            
             
 
             
 
-            <code class="ruby">  return</code>
+            <code class="ruby">      &quot;v&quot; =&gt; [&quot;0.&quot;, &quot;0.&quot;, &quot;00&quot;],</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="26">
+            
+            
+
+            
+
+            <code class="ruby">      &quot;w&quot; =&gt; [&quot;.0&quot;, &quot;00&quot;, &quot;.0&quot;],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby">      &quot;x&quot; =&gt; [&quot;00&quot;, &quot;..&quot;, &quot;00&quot;],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
+            
+            
+
+            
+
+            <code class="ruby">      &quot;y&quot; =&gt; [&quot;00&quot;, &quot;.0&quot;, &quot;00&quot;],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="29">
+            
+            
+
+            
+
+            <code class="ruby">      &quot;z&quot; =&gt; [&quot;0.&quot;, &quot;.0&quot;, &quot;00&quot;],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
+            
+            
+
+            
+
+            <code class="ruby">      &quot; &quot; =&gt; [&quot;..&quot;, &quot;..&quot;, &quot;..&quot;]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="31">
+            
+            
+
+            
+
+            <code class="ruby">    }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="33">
             
             
 

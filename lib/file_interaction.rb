@@ -1,4 +1,5 @@
 class FileInteraction
+  include LetterToBraille
   attr_reader :file_name, :byte_size
 
   def initialize()
