@@ -16,9 +16,9 @@ RSpec.describe NightWriter do
   end
 
   it 'outputs to $stdout when called with no or one argument' do
+
     message = 'Usage ruby ./lib/night_writer message.txt braille.txt'
-#    @night_writer.display_message_to_stdout
-    expect(@night_writer).to output('Usage ruby ./lib/night_writer message.txt braille.txt').to_stdout
+    expect(@night_writer.display_usage_message_to_stdout).to eq("Usage ruby ./lib/night_writer message.txt braille.txt")
 
   end
 
@@ -27,8 +27,11 @@ RSpec.describe NightWriter do
 end
 
 RSpec.describe FileInteraction do
+  before(:each) do
+    @file_interaction = FileInteraction.new()
+  end
+
   it 'exists' do
-    output_to_file = FileInteraction.new()
-    expect(output_to_file).to be_a (FileInteraction)
+    expect(@file_interaction).to be_a (FileInteraction)
   end
 end

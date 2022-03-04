@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-03T17:50:09-07:00">2022-03-03T17:50:09-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-03T18:05:22-07:00">2022-03-03T18:05:22-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -29,8 +29,8 @@
      </span>
      covered at
      <span class="covered_strength">
-       <span class="yellow">
-         1.0
+       <span class="green">
+         1.25
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>9</b> relevant lines,
-    <span class="green"><b>9</b> lines covered</span> and
+    <b>12</b> relevant lines,
+    <span class="green"><b>12</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -84,11 +84,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#c090dd539140bb14e2ff3ca8aca26a1096c7bcd6" class="src_link" title="lib/night_writer.rb">lib/night_writer.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">18</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">8</td>
+            <td class="cell--number">21</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">11</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">1.27</td>
             
           </tr>
         
@@ -176,8 +176,8 @@
     
 
     <div class="t-line-summary">
-      <b>8</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>11</b> relevant lines.
+      <span class="green"><b>11</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -206,18 +206,18 @@
 
             
 
-            <code class="ruby">class NightWriter</code>
+            <code class="ruby">require &#39;file_interaction&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="3">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">class NightWriter</code>
           </li>
         </div>
       
@@ -228,7 +228,7 @@
 
             
 
-            <code class="ruby">  def initialize()</code>
+            <code class="ruby">  attr_reader :file_interaction</code>
           </li>
         </div>
       
@@ -239,40 +239,40 @@
 
             
 
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
+          <li class="covered" data-hits="1" data-linenumber="6">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def display_usage_message_to_stdout</code>
+            <code class="ruby">  def initialize()</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="7">
+            <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">    puts &quot;Usage ruby ./lib/night_writer message.txt braille.txt&quot;</code>
+            <code class="ruby">    @file_interaction = FileInteraction.new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -283,29 +283,29 @@
 
             
 
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="11">
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
             
+
+            
+
+            <code class="ruby">  def display_usage_message_to_stdout</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="11">
+            <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">#  handle = File.open(ARGV[0], &quot;r&quot;)</code>
+            <code class="ruby">    return &quot;Usage ruby ./lib/night_writer message.txt braille.txt&quot;</code>
           </li>
         </div>
       
@@ -316,7 +316,7 @@
 
             
 
-            <code class="ruby">end</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -332,13 +332,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="14">
+            
             
 
             
 
-            <code class="ruby">night_writer = NightWriter.new</code>
+            <code class="ruby">#  handle = File.open(ARGV[0], &quot;r&quot;)</code>
           </li>
         </div>
       
@@ -349,18 +349,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="16">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="16">
+            
             
 
             
 
-            <code class="ruby">if ARGV[0] != &quot;message.txt&quot; || ARGV[1] != &quot;braille.txt&quot;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -371,12 +371,45 @@
 
             
 
-            <code class="ruby">  night_writer.display_usage_message_to_stdout</code>
+            <code class="ruby">night_writer = NightWriter.new</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="19">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">if ARGV[0] != &quot;message.txt&quot; || ARGV[1] != &quot;braille.txt&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  puts night_writer.display_usage_message_to_stdout</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
             
             
 
