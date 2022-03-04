@@ -23,7 +23,9 @@ RSpec.describe NightWriter do
   end
 
   it 'outputs to $stdout when called with two argument' do
-    byte_size = File.size(ARGV[0])
+    @night_writer.display_write_message_to_stdout
+    message = "Created 'braille.txt' containing #{File.size(ARGV[0])} characters"
+    expect(@night_writer.display_write_message_to_stdout).to eq(message)
   end
 end
 
