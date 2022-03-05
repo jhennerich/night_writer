@@ -3,12 +3,13 @@ require 'rspec'
 require 'spec_helper'
 require './lib/night_writer'
 require './lib/file_interaction'
+require './lib/letter_to_braille'
 
 RSpec.describe NightWriter do
   before(:each) do
     ARGV[0] = "message.txt"
     ARGV[1] = "braille.txt"
-    @night_writer = NightWriter.new()
+    @night_writer = NightWriter.new
   end
 
   it 'exists' do
@@ -44,10 +45,14 @@ RSpec.describe FileInteraction do
   end
 
   it 'can write to the braille file' do
-
     message_data = File.read(ARGV[0]).chomp
     File.write("braille.txt", message_data, mode: "w")
     braille_file = File.read("braille.txt").chomp
     expect(braille_file).to eq("hello world")
+  end
+
+  it '#write_to_output_file can write braille to braille file' do
+    @file_interaction.write_to_output_file
+    expect(File.read(ARGV[1])).to eq(["0.", "..", ".."])
   end
 end
