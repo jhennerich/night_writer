@@ -1,10 +1,16 @@
 require 'pry'
 require './lib/build_braille_letter'
+require './lib/file_interaction'
 
 class NightWriter
 
   def initialize()
-    BuildBrailleLetter.new(File.read(ARGV[0]).chomp)
+    write_file = BuildBrailleLetter.new(File.read(ARGV[0]).chomp).change_to_braille
+    file_interaction_engine = FileInteraction.new
+    if file_interaction_engine.write_to_output_file(write_file)
+      puts NightWriter.display_write_message_to_stdout
+    end
+
   end
 
   def self.display_usage_message_to_stdout
