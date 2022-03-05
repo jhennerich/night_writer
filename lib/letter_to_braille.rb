@@ -1,5 +1,5 @@
 module LetterToBraille
-  def letter_keys
+  def get_braille_value
     {
       "a" => ["0.", "..", ".."],
       "b" => ["0.", "0.", ".."],

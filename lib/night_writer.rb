@@ -4,7 +4,7 @@ require './lib/build_braille_letter'
 class NightWriter
 
   def initialize()
-
+    BuildBrailleLetter.new(File.read(ARGV[0]).chomp)
   end
 
   def self.display_usage_message_to_stdout

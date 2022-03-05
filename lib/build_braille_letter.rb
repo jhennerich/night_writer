@@ -8,20 +8,19 @@ class BuildBrailleLetter
     @top_row = []
     @mid_row = []
     @bottom_row = []
-    @braille_letter =[]
+    @braille_value_array =[]
     @braille_lines =[]
+    @count_letters = letters_to_convert.count
   end
 
   def change_to_braille
     @letters_to_convert.each do |letter|
-      @braille_letter << letter_keys[letter]
-      @braille_letter.each do |element|
-        @top_row = element.shift
-        @mid_row = element.shift
-        @bottom_row = element.shift
-      end
+      @braille_value_array = get_braille_value[letter]
+      @top_row = @braille_value_array.shift
+      @mid_row = @braille_value_array.shift
+      @bottom_row = @braille_value_array.shift
       @braille_lines << (@top_row+"\n"+@mid_row+"\n"+@bottom_row+"\n")
-    binding.pry
+      @letters_to_convert.shift
     end
     return @braille_lines
   end
