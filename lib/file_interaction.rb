@@ -19,11 +19,7 @@ class FileInteraction
     File.size(ARGV[0])
   end
 
-
-  def write_to_output_file
-    letter_keys["a"].each_index do |index|
-      binding.pry
-    end
-    File.write("braille.txt", letter_keys["a"][0], mode: "w")
+  def write_to_output_file(lines)
+    File.write("braille.txt", lines, mode: "w")
   end
 end
