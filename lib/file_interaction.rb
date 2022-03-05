@@ -12,11 +12,15 @@ class FileInteraction
   end
 
   def read_input_file
-    File.read(ARGV[0]).chomp
+    if(ARGV[0])
+      File.read(ARGV[0]).chomp
+    end
   end
 
   def read_byte_size
-    File.size(ARGV[0])
+    if(ARGV[0])
+      File.size(ARGV[0])
+    end
   end
 
   def write_to_output_file(lines)
