@@ -16,37 +16,39 @@ class BuildBrailleLetter
 
   def change_to_braille
 
-    # single letter to change
-    if @letters_to_convert.class == String
-      @braille_value_array = get_braille_value[@letters_to_convert]
-      @top_row = @braille_value_array.shift
-      @mid_row = @braille_value_array.shift
-      @bottom_row = @braille_value_array.shift
-      @braille_lines = @top_row+"\n"+@mid_row+"\n"+@bottom_row+"\n"
+    count = 0
+    @counter = @letters_to_convert.count
 
-    else
-      @counter = @letters_to_convert.count
-      @letters_to_convert.each do |letter|
-        @braille_value_array = get_braille_value[letter]
+    @counter.times do
+      count += 1
+      letter = @letters_to_convert.shift
+      @braille_value_array = get_braille_value[letter]
+
+      if count % 40 == 0
+        puts "in 40 count bva is#{@braille_value_array} "
+        puts "need newline"
+#        @top_row << @braille_value_array.shift
+#        @top_row << "\n"
+#        @top_row.push("\n")
+#        @mid_row << @braille_value_array.shift
+#        @top_row << "\n"
+#        @bottom_row << @braille_value_array.shift
+#        @top_row << "\n"
+#        @braille_lines << (@top_row.join)+"\n"+(@mid_row.join)+"\n"+(@bottom_row.join)
+#        @top_row = []
+##        @mid_row = []
+#        @bottom_row = []
+#        @braille_lines = []
+#        @bottom_row.push("\n")
+#        @mid_row << @braille_value_array.shift+"\n"
+#        @bottom_row << @braille_value_array.shift+"\n"
+      else
         @top_row << @braille_value_array.shift
         @mid_row << @braille_value_array.shift
         @bottom_row << @braille_value_array.shift
       end
-      #(1..(@counter)).each do |insert_newline|
-#puts "insert_newline value #{insert_newline % 40}"
-#        if insert_newline % 40 == 0
-#          @braille_lines << (@top_row.join)+"\n"+(@mid_row.join)+"\n"+(@bottom_row.join)+"\n"
-#          @letters_to_convert.shift
-#        else
-#          @braille_lines << (@top_row.join)+"\n"+(@mid_row.join)+"\n"+(@bottom_row.join)
-#          @letters_to_convert.shift
-        #end
-      #end
     end
-    #make sure last element has \n"
-#    @braille_lines[@counter -1] = ((@top_row.join)+"\n"+(@mid_row.join)+"\n"+(@bottom_row.join)+"\n")
     @braille_lines << (@top_row.join)+"\n"+(@mid_row.join)+"\n"+(@bottom_row.join)+"\n"
-    binding.pry
     @braille_lines
   end
 end

@@ -24,18 +24,27 @@ RSpec.describe FileInteraction do
 
   xit '#write_to_output_file can write a single letterto braille to file' do
     fi = FileInteraction.new
-    bbl = BuildBrailleLetter.new("a")
-    line_to_write = bbl.change_to_braille
+    bbl = BuildBrailleLetter.new(["a"])
+    line_to_write = bbl.change_to_braille.join
 
     fi.write_to_output_file(line_to_write)
     expect(File.read("./braille.txt")).to eq(line_to_write)
   end
 
-  it '#write_to_output_file can write many letters to braille to file' do
+  xit '#write_to_output_file can write many letters to braille to file' do
     fi = FileInteraction.new
     bbl = BuildBrailleLetter.new(["a","b"])
     line_to_write = bbl.change_to_braille.join
-#  binding.pry
+
+    fi.write_to_output_file(line_to_write)
+#    expect(File.read("./braille.txt")).to eq(line_to_write)
+  end
+  it '#write_to_output_file can write 41 letters with newline' do
+    fi = FileInteraction.new
+
+    bbl = BuildBrailleLetter.new(["a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a"," ","b"])
+    #bbl = BuildBrailleLetter.new(["a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a","a"])
+    line_to_write = bbl.change_to_braille.join
 
     fi.write_to_output_file(line_to_write)
 #    expect(File.read("./braille.txt")).to eq(line_to_write)

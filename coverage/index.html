@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.12.3/application.js' type='text/javascript'></script>
     <link href='./assets/0.12.3/application.css' media='screen, projection, print' rel='stylesheet' type='text/css' />
-    <link rel="shortcut icon" type="image/png" href="./assets/0.12.3/favicon_yellow.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.12.3/favicon_green.png" />
     <link rel="icon" type="image/png" href="./assets/0.12.3/favicon.png" />
   </head>
 
@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-05T12:52:58-07:00">2022-03-05T12:52:58-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-05T14:57:42-07:00">2022-03-05T14:57:42-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -22,15 +22,15 @@
   <h2>
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
-      <span class="yellow">
-  86.96%
+      <span class="green">
+  97.78%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.98
+       <span class="green">
+         8.2
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>46</b> relevant lines,
-    <span class="green"><b>40</b> lines covered</span> and
-    <span class="red"><b>6</b> lines missed. </span>
-    (<span class="yellow">
-  86.96%
+    <b>45</b> relevant lines,
+    <span class="green"><b>44</b> lines covered</span> and
+    <span class="red"><b>1</b> lines missed. </span>
+    (<span class="green">
+  97.78%
 </span>
 )
   </div>
@@ -72,12 +72,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#79c42669a3ab2955cd6356338f0c38bb095138c6" class="src_link" title="lib/build_braille_letter.rb">lib/build_braille_letter.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">82.14 %</td>
-            <td class="cell--number">52</td>
-            <td class="cell--number">28</td>
-            <td class="cell--number">23</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">0.96</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">54</td>
+            <td class="cell--number">27</td>
+            <td class="cell--number">27</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">11.52</td>
             
           </tr>
         
@@ -99,7 +99,7 @@
             <td class="cell--number">3</td>
             <td class="cell--number">3</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.33</td>
+            <td class="cell--number">14.67</td>
             
           </tr>
         
@@ -124,8 +124,8 @@
   <div class="header">
     <h3>lib/build_braille_letter.rb</h3>
     <h4>
-      <span class="yellow">
-  82.14%
+      <span class="green">
+  100.0%
 </span>
 
       lines covered
@@ -134,9 +134,9 @@
     
 
     <div class="t-line-summary">
-      <b>28</b> relevant lines.
-      <span class="green"><b>23</b> lines covered</span> and
-      <span class="red"><b>5</b> lines missed.</span>
+      <b>27</b> relevant lines.
+      <span class="green"><b>27</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -345,13 +345,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="19">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="19">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    # single letter to change</code>
+            
+
+            <code class="ruby">    count = 0</code>
           </li>
         </div>
       
@@ -362,62 +362,62 @@
 
             
 
-            <code class="ruby">    if @letters_to_convert.class == String</code>
+            <code class="ruby">    @counter = @letters_to_convert.count</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="21">
+          <li class="never" data-hits="" data-linenumber="21">
             
             
 
             
 
-            <code class="ruby">      @braille_value_array = get_braille_value[@letters_to_convert]</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="22">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="22">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">      @top_row = @braille_value_array.shift</code>
+            
+
+            <code class="ruby">    @counter.times do</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="23">
-            
-            
-
+          <li class="covered" data-hits="42" data-linenumber="23">
+            <span class="hits">42</span>
             
 
-            <code class="ruby">      @mid_row = @braille_value_array.shift</code>
+            
+
+            <code class="ruby">      count += 1</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="24">
-            
-            
-
+          <li class="covered" data-hits="42" data-linenumber="24">
+            <span class="hits">42</span>
             
 
-            <code class="ruby">      @bottom_row = @braille_value_array.shift</code>
+            
+
+            <code class="ruby">      letter = @letters_to_convert.shift</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="25">
-            
-            
-
+          <li class="covered" data-hits="42" data-linenumber="25">
+            <span class="hits">42</span>
             
 
-            <code class="ruby">      @braille_lines = @top_row+&quot;\n&quot;+@mid_row+&quot;\n&quot;+@bottom_row+&quot;\n&quot;</code>
+            
+
+            <code class="ruby">      @braille_value_array = get_braille_value[letter]</code>
           </li>
         </div>
       
@@ -433,13 +433,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="27">
-            
-            
-
+          <li class="covered" data-hits="42" data-linenumber="27">
+            <span class="hits">42</span>
             
 
-            <code class="ruby">    else</code>
+            
+
+            <code class="ruby">      if count % 40 == 0</code>
           </li>
         </div>
       
@@ -450,7 +450,7 @@
 
             
 
-            <code class="ruby">      @counter = @letters_to_convert.count</code>
+            <code class="ruby">        puts &quot;in 40 count bva is#{@braille_value_array} &quot;</code>
           </li>
         </div>
       
@@ -461,51 +461,51 @@
 
             
 
-            <code class="ruby">      @letters_to_convert.each do |letter|</code>
+            <code class="ruby">        puts &quot;need newline&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="30">
-            <span class="hits">2</span>
+          <li class="never" data-hits="" data-linenumber="30">
+            
             
 
             
 
-            <code class="ruby">        @braille_value_array = get_braille_value[letter]</code>
+            <code class="ruby">#        @top_row &lt;&lt; @braille_value_array.shift</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="31">
-            <span class="hits">2</span>
+          <li class="never" data-hits="" data-linenumber="31">
+            
             
 
             
 
-            <code class="ruby">        @top_row &lt;&lt; @braille_value_array.shift</code>
+            <code class="ruby">#        @top_row &lt;&lt; &quot;\n&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="32">
-            <span class="hits">2</span>
+          <li class="never" data-hits="" data-linenumber="32">
+            
             
 
             
 
-            <code class="ruby">        @mid_row &lt;&lt; @braille_value_array.shift</code>
+            <code class="ruby">#        @top_row.push(&quot;\n&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="33">
-            <span class="hits">2</span>
+          <li class="never" data-hits="" data-linenumber="33">
+            
             
 
             
 
-            <code class="ruby">        @bottom_row &lt;&lt; @braille_value_array.shift</code>
+            <code class="ruby">#        @mid_row &lt;&lt; @braille_value_array.shift</code>
           </li>
         </div>
       
@@ -516,7 +516,7 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby">#        @top_row &lt;&lt; &quot;\n&quot;</code>
           </li>
         </div>
       
@@ -527,7 +527,7 @@
 
             
 
-            <code class="ruby">      #(1..(@counter)).each do |insert_newline|</code>
+            <code class="ruby">#        @bottom_row &lt;&lt; @braille_value_array.shift</code>
           </li>
         </div>
       
@@ -538,7 +538,7 @@
 
             
 
-            <code class="ruby">#puts &quot;insert_newline value #{insert_newline % 40}&quot;</code>
+            <code class="ruby">#        @top_row &lt;&lt; &quot;\n&quot;</code>
           </li>
         </div>
       
@@ -549,7 +549,7 @@
 
             
 
-            <code class="ruby">#        if insert_newline % 40 == 0</code>
+            <code class="ruby">#        @braille_lines &lt;&lt; (@top_row.join)+&quot;\n&quot;+(@mid_row.join)+&quot;\n&quot;+(@bottom_row.join)</code>
           </li>
         </div>
       
@@ -560,7 +560,7 @@
 
             
 
-            <code class="ruby">#          @braille_lines &lt;&lt; (@top_row.join)+&quot;\n&quot;+(@mid_row.join)+&quot;\n&quot;+(@bottom_row.join)+&quot;\n&quot;</code>
+            <code class="ruby">#        @top_row = []</code>
           </li>
         </div>
       
@@ -571,7 +571,7 @@
 
             
 
-            <code class="ruby">#          @letters_to_convert.shift</code>
+            <code class="ruby">##        @mid_row = []</code>
           </li>
         </div>
       
@@ -582,7 +582,7 @@
 
             
 
-            <code class="ruby">#        else</code>
+            <code class="ruby">#        @bottom_row = []</code>
           </li>
         </div>
       
@@ -593,7 +593,7 @@
 
             
 
-            <code class="ruby">#          @braille_lines &lt;&lt; (@top_row.join)+&quot;\n&quot;+(@mid_row.join)+&quot;\n&quot;+(@bottom_row.join)</code>
+            <code class="ruby">#        @braille_lines = []</code>
           </li>
         </div>
       
@@ -604,7 +604,7 @@
 
             
 
-            <code class="ruby">#          @letters_to_convert.shift</code>
+            <code class="ruby">#        @bottom_row.push(&quot;\n&quot;)</code>
           </li>
         </div>
       
@@ -615,7 +615,7 @@
 
             
 
-            <code class="ruby">        #end</code>
+            <code class="ruby">#        @mid_row &lt;&lt; @braille_value_array.shift+&quot;\n&quot;</code>
           </li>
         </div>
       
@@ -626,7 +626,7 @@
 
             
 
-            <code class="ruby">      #end</code>
+            <code class="ruby">#        @bottom_row &lt;&lt; @braille_value_array.shift+&quot;\n&quot;</code>
           </li>
         </div>
       
@@ -637,34 +637,67 @@
 
             
 
+            <code class="ruby">      else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="41" data-linenumber="46">
+            <span class="hits">41</span>
+            
+
+            
+
+            <code class="ruby">        @top_row &lt;&lt; @braille_value_array.shift</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="41" data-linenumber="47">
+            <span class="hits">41</span>
+            
+
+            
+
+            <code class="ruby">        @mid_row &lt;&lt; @braille_value_array.shift</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="41" data-linenumber="48">
+            <span class="hits">41</span>
+            
+
+            
+
+            <code class="ruby">        @bottom_row &lt;&lt; @braille_value_array.shift</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="49">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="50">
+            
+            
+
+            
+
             <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="46">
-            
-            
-
-            
-
-            <code class="ruby">    #make sure last element has \n&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="47">
-            
-            
-
-            
-
-            <code class="ruby">#    @braille_lines[@counter -1] = ((@top_row.join)+&quot;\n&quot;+(@mid_row.join)+&quot;\n&quot;+(@bottom_row.join)+&quot;\n&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="48">
+          <li class="covered" data-hits="1" data-linenumber="51">
             <span class="hits">1</span>
             
 
@@ -675,18 +708,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="49">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    binding.pry</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="50">
+          <li class="covered" data-hits="1" data-linenumber="52">
             <span class="hits">1</span>
             
 
@@ -697,7 +719,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="51">
+          <li class="never" data-hits="" data-linenumber="53">
             
             
 
@@ -708,7 +730,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="52">
+          <li class="never" data-hits="" data-linenumber="54">
             
             
 
@@ -1089,8 +1111,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="4">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="42" data-linenumber="4">
+            <span class="hits">42</span>
             
 
             
