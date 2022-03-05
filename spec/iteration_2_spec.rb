@@ -1,0 +1,58 @@
+require 'pry'
+require 'rspec'
+require 'spec_helper'
+require './lib/night_writer'
+require './lib/file_interaction'
+require './lib/letter_to_braille'
+
+RSpec.describe NightWriter do
+  before(:each) do
+    ARGV[0] = "message.txt"
+    ARGV[1] = "braille.txt"
+    @night_writer = NightWriter.new
+  end
+
+  it 'exists' do
+    expect(@night_writer).to be_a (NightWriter)
+  end
+
+  it 'outputs to $stdout when called with no or one argument' do
+
+    message = 'Usage ruby ./lib/night_writer message.txt braille.txt'
+    expect(@night_writer.display_usage_message_to_stdout).to eq("Usage ruby ./lib/night_writer message.txt braille.txt")
+
+  end
+
+  it 'outputs to $stdout when called with two argument' do
+    @night_writer.display_write_message_to_stdout
+    message = "Created '#{ARGV[1]}' containing #{File.size(ARGV[0])} characters"
+    expect(@night_writer.display_write_message_to_stdout).to eq(message)
+  end
+end
+
+RSpec.describe FileInteraction do
+  before(:each) do
+    @file_interaction = FileInteraction.new()
+  end
+
+  it 'exists' do
+    expect(@file_interaction).to be_a (FileInteraction)
+  end
+
+  it 'can read the data file' do
+    message_data = File.read(ARGV[0]).chomp
+    expect(message_data).to eq("hello world")
+  end
+
+  it 'can write to the braille file' do
+    message_data = File.read(ARGV[0]).chomp
+    File.write("braille.txt", message_data, mode: "w")
+    braille_file = File.read("braille.txt").chomp
+    expect(braille_file).to eq("hello world")
+  end
+
+  it '#write_to_output_file can write braille to braille file' do
+    @file_interaction.write_to_output_file
+    expect(File.read(ARGV[1])).to eq(["0.", "..", ".."])
+  end
+end
