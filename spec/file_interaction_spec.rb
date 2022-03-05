@@ -1,5 +1,7 @@
+require 'pry'
 require 'spec_helper'
 require './lib/file_interaction'
+require './lib/build_braille_letter'
 
 RSpec.describe FileInteraction do
 
@@ -20,8 +22,11 @@ RSpec.describe FileInteraction do
     expect(braille_file).to eq("a")
   end
 
-  xit '#write_to_output_file can write braille to braille file' do
-    @file_interaction.write_to_output_file
-    expect(File.read(ARGV[1])).to eq(["0.", "..", ".."])
+  it '#write_to_output_file can write braille to braille file' do
+    fi = FileInteraction.new
+    bbl = BuildBrailleLetter.new("a")
+    line_to_write = bbl.change_to_braille
+    fi.write_to_output_file(line_to_write)
+#    expect(File.read(ARGV[1])).to eq(["0.", "..", ".."])
   end
 end

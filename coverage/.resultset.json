@@ -11,13 +11,13 @@
           1,
           null,
           1,
-          1,
-          1,
-          1,
+          2,
+          2,
+          2,
           null,
           null,
           1,
-          1,
+          2,
           null,
           null,
           1,
@@ -66,8 +66,46 @@
           null,
           null
         ]
+      },
+      "/Users/johnhennerich/turing/1mod/projects/night_writer/lib/build_braille_letter.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1646494645
+    "timestamp": 1646495801
   }
 }
