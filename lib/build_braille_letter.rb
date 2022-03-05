@@ -15,7 +15,6 @@ class BuildBrailleLetter
   end
 
   def change_to_braille
-
     count = 0
     @counter = @letters_to_convert.count
 
@@ -24,9 +23,9 @@ class BuildBrailleLetter
       letter = @letters_to_convert.shift
       @braille_value_array = get_braille_value[letter]
 
-      if count % 40 == 0
-        puts "in 40 count bva is#{@braille_value_array} "
-        puts "need newline"
+      if (count % 40).zero?
+#        puts "in 40 count bva is#{@braille_value_array} "
+#        puts "need newline"
 #        @top_row << @braille_value_array.shift
 #        @top_row << "\n"
 #        @top_row.push("\n")

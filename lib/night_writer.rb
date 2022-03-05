@@ -10,7 +10,6 @@ class NightWriter
     if file_interaction_engine.write_to_output_file(write_file)
       puts NightWriter.display_write_message_to_stdout
     end
-
   end
 
   def self.display_usage_message_to_stdout
@@ -21,7 +20,6 @@ class NightWriter
     return "Created '#{ARGV[1]}' containing #{File.size(ARGV[0])} characters"
   end
 end
-
 
 if ARGV[0] != "message.txt" || ARGV[1] != "braille.txt"
   puts NightWriter.display_usage_message_to_stdout
