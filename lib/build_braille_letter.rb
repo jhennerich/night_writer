@@ -19,7 +19,7 @@ class BuildBrailleLetter
       @top_row = @braille_value_array.shift
       @mid_row = @braille_value_array.shift
       @bottom_row = @braille_value_array.shift
-      @braille_lines << (@top_row+"\n"+@mid_row+"\n"+@bottom_row+"\n")
+      @braille_lines << (@top_row+"\n"+@mid_row+"\n"+@bottom_row)
       @letters_to_convert.shift
     end
     return @braille_lines
