@@ -5,7 +5,7 @@ class BuildBrailleLetter
   attr_reader :letters_to_convert
 
   def initialize(letters_to_convert)
-    @letters_to_convert = letters_to_convert
+    @letters_to_convert = letters_to_convert.chars
     @top_row = []
     @mid_row = []
     @bottom_row = []
@@ -49,6 +49,6 @@ class BuildBrailleLetter
       end
     end
     @braille_lines << (@top_row.join)+"\n"+(@mid_row.join)+"\n"+(@bottom_row.join)+"\n"
-    @braille_lines
+    @braille_lines.join
   end
 end
