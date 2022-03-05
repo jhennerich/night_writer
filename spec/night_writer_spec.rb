@@ -4,7 +4,7 @@ require './lib/night_writer'
 
 RSpec.describe NightWriter do
 
-  it 'exists' do
+  xit 'exists' do
     night_writer = NightWriter.new
     expect(night_writer).to be_a (NightWriter)
   end
@@ -17,6 +17,8 @@ RSpec.describe NightWriter do
   end
 
   it 'outputs to $stdout when called with two argument' do
+    ARGV[0] = "./message.txt"
+    ARGV[1] = "./braille.txt"
     message = "Created '#{ARGV[1]}' containing #{File.size(ARGV[0])} characters"
     expect(NightWriter.display_write_message_to_stdout).to eq(message)
   end
