@@ -24,30 +24,21 @@ class BuildBrailleLetter
       @braille_value_array = get_braille_value[letter]
 
       if (count % 40).zero?
-#        puts "in 40 count bva is#{@braille_value_array} "
-#        puts "need newline"
-#        @top_row << @braille_value_array.shift
-#        @top_row << "\n"
-#        @top_row.push("\n")
-#        @mid_row << @braille_value_array.shift
-#        @top_row << "\n"
-#        @bottom_row << @braille_value_array.shift
-#        @top_row << "\n"
-#        @braille_lines << (@top_row.join)+"\n"+(@mid_row.join)+"\n"+(@bottom_row.join)
-#        @top_row = []
-##        @mid_row = []
-#        @bottom_row = []
-#        @braille_lines = []
-#        @bottom_row.push("\n")
-#        @mid_row << @braille_value_array.shift+"\n"
-#        @bottom_row << @braille_value_array.shift+"\n"
+        @top_row << "\n"
+        @mid_row << "\n"
+        @bottom_row << "\n"
+        @braille_lines << @top_row.join+@mid_row.join+@bottom_row.join
+        @top_row = []
+        @mid_row = []
+        @bottom_row = []
       else
         @top_row << @braille_value_array.shift
         @mid_row << @braille_value_array.shift
         @bottom_row << @braille_value_array.shift
       end
     end
-    @braille_lines << (@top_row.join)+"\n"+(@mid_row.join)+"\n"+(@bottom_row.join)+"\n"
+
+    @braille_lines << @top_row.join+"\n"+@mid_row.join+"\n"+@bottom_row.join+"\n"
     @braille_lines.join
   end
 end
