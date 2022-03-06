@@ -13,5 +13,4 @@ module Messageable
   def display_write_message_to_stdout
     "Created '#{ARGV[1]}' containing #{File.size(ARGV[1])} characters"
   end
-#  File.basename(filename, File.extname(filename))
 end

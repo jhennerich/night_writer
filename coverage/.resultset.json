@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/johnhennerich/turing/1mod/projects/night_writer/lib/braille_to_letter.rb": {
+      "/Users/johnhennerich/turing/1mod/projects/night_writer/lib/letter_to_braille.rb": {
         "lines": [
           1,
           1,
@@ -38,11 +38,11 @@
           null
         ]
       },
-      "/Users/johnhennerich/turing/1mod/projects/night_writer/lib/build_from_braille_to_letter.rb": {
+      "/Users/johnhennerich/turing/1mod/projects/night_writer/lib/build_braille_letter.rb": {
         "lines": [
           1,
-          1,
           null,
+          1,
           1,
           1,
           null,
@@ -52,12 +52,10 @@
           2,
           2,
           2,
+          2,
+          2,
           null,
           null,
-          null,
-          1,
-          1,
-          1,
           1,
           1,
           1,
@@ -66,17 +64,29 @@
           1,
           1,
           1,
+          null,
           1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
           1,
           1,
+          1,
           null,
+          null,
+          null,
+          1,
           1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1646581576
+    "timestamp": 1646589540
   }
 }
