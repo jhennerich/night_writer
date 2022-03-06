@@ -29,6 +29,6 @@ class BuildFromBraille
     @braille_value_array.each_index do |index|
       @letters << get_letter_value[@braille_value_array[index]]
     end
-    @letters
+    return @letters
   end
 end
