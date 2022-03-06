@@ -5,8 +5,7 @@ require './lib/file_interaction'
 class NightWriter
 
   def initialize()
-    write_file = BuildBrailleLetter.new(
-      File.read(ARGV[0]).delete("\n").chomp).change_to_braille
+    write_file = BuildBrailleLetter.new(File.read(ARGV[0]).delete("\n").chomp).change_to_braille
 
     file_interaction_engine = FileInteraction.new
     if file_interaction_engine.write_to_output_file(write_file)
