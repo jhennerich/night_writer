@@ -42,10 +42,10 @@ RSpec.describe FileInteraction do
     expect(File.read('./braille.txt')).to eq(line_to_write)
   end
 
-  xit '#write_to_output_file can write 41 letters with newline' do
+  it '#write_to_output_file can write 41 letters with newline' do
 
     fi = FileInteraction.new
-    message_data = File.read('./message_test.txt').chomp
+    message_data = File.read('./message_test3.txt').delete("\n").chomp
     bbl = BuildBrailleLetter.new(message_data)
     line_to_write = bbl.change_to_braille
 
