@@ -1,1 +1,1 @@
-this is a test of the braille to letter letter to braille programs
+this is a long message to see if it goes over fourty chars
