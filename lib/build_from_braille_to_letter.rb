@@ -1,4 +1,3 @@
-require 'pry'
 require './lib/braille_to_letter'
 
 class BuildFromBraille
@@ -7,13 +6,8 @@ class BuildFromBraille
   def initialize(braille_data)
     @braille_data = braille_data
     @braille_lines = []
-    @counter = 0
     @braille_value_array = []
     @letters = []
-     @top = []
-     @mid = []
-     @bottom = []
-
   end
 
   def build_braille_value_array
@@ -24,17 +18,17 @@ class BuildFromBraille
   end
 
   def braille_to_letter
-#    @counter = @braille_data.length/2
-    counter_multipler = 0
     @braille_lines = @braille_data.split("\n")
-    if @braille_lines.length > 3
-      puts "something here"
-    else
+
+    while @braille_lines.length > 3
       count = @braille_lines[0].length / 2
-      count.times do
-        build_braille_value_array
-      end
+      count.times { build_braille_value_array }
+      @braille_lines.shift(3)
     end
+
+    count = @braille_lines[0].length / 2
+    count.times { build_braille_value_array }
+
     @braille_value_array.each_index do |index|
       @letters << get_letter_value[@braille_value_array[index]]
     end
