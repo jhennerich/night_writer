@@ -10,21 +10,30 @@ class BuildFromBraille
     @counter = 0
     @braille_value_array = []
     @letters = []
+     @top = []
+     @mid = []
+     @bottom = []
 
   end
 
-  def braille_to_letter
-    @braille_lines = @braille_data.split("\n")
-    @counter = @braille_lines[0].length/2
-    top = @braille_lines[0]
-    mid = @braille_lines[1]
-    bottom = @braille_lines[2]
-
-    @counter.times do
+  def build_braille_value_array
       @braille_value_array <<
-         (Array(top.slice!(0..1))) +
-         (Array(mid.slice!(0..1))) +
-         (Array(bottom.slice!(0..1)))
+         (Array(@braille_lines[0].slice!(0..1))) +
+         (Array(@braille_lines[1].slice!(0..1))) +
+         (Array(@braille_lines[2].slice!(0..1)))
+  end
+
+  def braille_to_letter
+#    @counter = @braille_data.length/2
+    counter_multipler = 0
+    @braille_lines = @braille_data.split("\n")
+    if @braille_lines.length > 3
+      puts "something here"
+    else
+      count = @braille_lines[0].length / 2
+      count.times do
+        build_braille_value_array
+      end
     end
     @braille_value_array.each_index do |index|
       @letters << get_letter_value[@braille_value_array[index]]
