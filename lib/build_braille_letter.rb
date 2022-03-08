@@ -6,12 +6,16 @@ class BuildBrailleLetter
 
   def initialize(letters_to_convert)
     @letters_to_convert = letters_to_convert.chars
-    @top_row = []
-    @mid_row = []
-    @bottom_row = []
+    clear_rows
     @braille_value_array =[]
     @braille_lines =[]
     @counter = 0
+  end
+
+  def clear_rows
+    @top_row = []
+    @mid_row = []
+    @bottom_row = []
   end
 
   def populate_rows
@@ -32,9 +36,7 @@ class BuildBrailleLetter
       if (count % 40).zero?
         populate_rows
         @braille_lines << @top_row.join+"\n"+@mid_row.join+"\n"+@bottom_row.join+"\n"
-        @top_row = []
-        @mid_row = []
-        @bottom_row = []
+        clear_rows
       else
         populate_rows
       end
