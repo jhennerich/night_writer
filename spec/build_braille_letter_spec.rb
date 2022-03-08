@@ -12,6 +12,6 @@ RSpec.describe BuildBrailleLetter do
 
   it 'creates an array to write to output file' do
     bbl = BuildBrailleLetter.new("a")
-    expect(bbl.change_to_braille).to eq("0.\n..\n..\n")
+    expect(bbl.change_to_braille).to eq("0.\n..\n..")
   end
 end
