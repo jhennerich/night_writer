@@ -1,4 +1,3 @@
-require 'pry'
 require './lib/letter_to_braille'
 
 class FileInteraction
@@ -12,15 +11,11 @@ class FileInteraction
   end
 
   def read_input_file
-    if(ARGV[0])
-      File.read(ARGV[0]).chomp
-    end
+      File.read(ARGV[0]).chomp if(ARGV[0])
   end
 
   def read_byte_size
-    if(ARGV[0])
-      File.size(ARGV[0])
-    end
+      File.size(ARGV[0]) if(ARGV[0])
   end
 
   def write_to_output_file(lines)
